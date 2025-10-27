@@ -1,0 +1,66 @@
+/* Estilos para la tabla de juegos registrados */
+
+#tabla-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#tabla-container h2 {
+    color: #468f34;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#consolas {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+}
+
+#consolas th {
+    background-color: #dc1919;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+#consolas td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estilos alternados para las filas */
+.renglon1 {
+    background-color: #f9f9f9;
+}
+
+.renglon2 {
+    background-color: #e8f4e8;
+}
+
+/* Efecto hover para las filas mejorado */
+#consolas tr:hover {
+    background-color: #b3d9ff !important;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#consolas tr {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Ocultar la tabla cuando esté vacía */
+#consolas:empty {
+    display: none;
+}

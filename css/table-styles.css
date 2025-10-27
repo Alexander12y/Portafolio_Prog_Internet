@@ -1,0 +1,189 @@
+/* Estilos específicos para tablas HTML */
+
+.table-container {
+    margin: 2rem 0;
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+table th {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    color: white;
+    font-weight: 600;
+    padding: 15px 12px;
+    text-align: left;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.9rem;
+    color: #495057;
+    transition: background-color 0.3s ease;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f8f9fa;
+}
+
+table tr:hover td {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+/* Tablas con bordes específicos (estilo clásico) */
+table.bordered {
+    border: 2px solid #d97706;
+}
+
+table.bordered th,
+table.bordered td {
+    border: 1px solid #d97706;
+    padding: 10px;
+}
+
+table.bordered th {
+    background-color: #d97706;
+    color: white;
+}
+
+/* Tablas para conversión de grados */
+.conversion-table {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.conversion-table th {
+    text-align: center;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.conversion-table td {
+    text-align: center;
+    font-weight: 500;
+}
+
+.conversion-table .celsius {
+    color: #007bff;
+}
+
+.conversion-table .fahrenheit {
+    color: #dc3545;
+}
+
+.conversion-table .kelvin {
+    color: #6f42c1;
+}
+
+/* Tablas para resultados de cálculos matemáticos */
+.math-table {
+    margin: 2rem auto;
+    max-width: 400px;
+}
+
+.math-table th {
+    background: linear-gradient(135deg, #fd7e14 0%, #e83e8c 100%);
+    text-align: center;
+}
+
+.math-table td {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+}
+
+.math-table .iteration {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.math-table .result {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+
+@keyframes fadeInRow {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilos para tablas de datos específicos */
+.data-table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.data-table th {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    padding: 18px 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.data-table td {
+    padding: 15px;
+    font-size: 0.95rem;
+}
+
+/* Destacar celdas importantes */
+.highlight {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%) !important;
+    color: #856404 !important;
+    font-weight: 600;
+}
+
+.success {
+    background: linear-gradient(135deg, #d1f2eb 0%, #a7f3d0 100%) !important;
+    color: #0f5132 !important;
+}
+
+.error {
+    background: linear-gradient(135deg, #f8d7da 0%, #fecaca 100%) !important;
+    color: #721c24 !important;
+}

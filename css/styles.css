@@ -1,0 +1,312 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navegación */
+.navbar {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand h1 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* Secciones principales */
+.hero, .about-hero {
+    background: linear-gradient(135deg, #e6e1da 0%, #ea580c 100%);
+    color: rgb(0, 0, 0);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1, .about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-subtitle, .about-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hero-description, .about-description p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.85;
+}
+
+/* Secciones de contenido */
+.practices, .contact {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.skills, .education {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+/* Títulos de sección */
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+/* Grids generales */
+.practices-grid, .contact-grid, .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Cards generales */
+.practice-card, .contact-card, .skill-item, .education-item {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.practice-card:hover, .contact-card:hover, .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Headers de cards */
+.practice-header, .contact-card {
+    text-align: center;
+}
+
+.practice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.practice-header h3, .contact-card h3, .skill-item h4 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Tags y badges */
+.practice-tech, .skill-tag {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Párrafos en cards */
+.practice-card p, .contact-card p, .skill-item p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Contenedores de enlaces */
+.practice-links, .skills-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Botones */
+.btn, .contact-link {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary, .contact-link {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    color: white;
+}
+
+.btn-primary:hover, .contact-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(217, 119, 6, 0.4);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Contenido About */
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.personal-info {
+    margin-top: 2rem;
+}
+
+.personal-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.profile-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon {
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Navegación de prácticas */
+.practice-nav {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.practice-nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.practice-nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Contenido de prácticas */
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.practice-card,
+.contact-card,
+.skill-item {
+    animation: fadeInUp 0.6s ease-out;
+}

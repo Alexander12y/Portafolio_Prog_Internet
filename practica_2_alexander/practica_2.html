@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 2 HTML</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/table-styles.css">
+    <style>
+        .practice-nav {
+            background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        .practice-nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .practice-nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="practice-nav">
+        <a href="../index.html">← Volver al Portafolio</a>
+        <a href="../practica_3_alexander/home.html">Práctica 3</a>
+        <a href="../practica_4_alexander/factorial.html">Práctica 4</a>
+        <a href="../practica_5_alexander/consolas.html">Práctica 5</a>
+        <a href="../practica_6_alexander/audio,video.html">Práctica 6</a>
+        <a href="../practica_7_alexander/pi.php">Práctica 7</a>
+        <a href="../about.html">Acerca de</a>
+    </nav>
+    
+    <div class="content">
+        <h1>Práctica 2: HTML</h1>
+        <h2>Alexander Clempner</h2>
+    <h1>Filosofía Estoica</h1>
+    <h2>Principios Fundamentales</h2>
+    <h3>Virtud</h3>
+    <h4>Sabiduría</h4>
+    <h5>Templanza</h5>
+    <h6>Disciplina</h6>
+
+    <ol>
+        <li>Sabiduría</li>
+        <li>Valentía</li>
+        <li>Justicia</li>
+        <li>Templanza</li>
+        <li>Disciplina</li>
+        <li>Autocontrol</li>
+        <li>Resiliencia</li>
+        <li>Serenidad</li>
+        <li>Racionalidad</li>
+        <li>Tranquilidad</li>
+    </ol>
+
+    <ul>
+        <li>Epicteto</li>
+        <li>Marco Aurelio</li>
+        <li>Séneca</li>
+        <li>Zenón de Citio</li>
+        <li>Musonio Rufo</li>
+        <li>Hierocles</li>
+        <li>Cato el Joven</li>
+        <li>Cleantes</li>
+        <li>Panecio</li>
+        <li>Posidonio</li>
+    </ul>
+
+    <dl>
+        <dt>Virtud</dt>
+        <dd>La excelencia moral y ética.</dd>
+        <dt>Sabiduría</dt>
+        <dd>Conocimiento aplicado a la vida.</dd>
+        <dt>Templanza</dt>
+        <dd>Control sobre los deseos y emociones.</dd>
+        <dt>Coraje</dt>
+        <dd>Valentía ante la adversidad.</dd>
+        <dt>Justicia</dt>
+        <dd>Dar a cada quien lo que le corresponde.</dd>
+    </dl>
+
+    <form>
+        <label>Nombre:</label>
+        <input type="text" name="nombre"><br>
+        <label>Apellido:</label>
+        <input type="text" name="apellido"><br>
+        <label>Ciudad:</label>
+        <input type="text" name="ciudad"><br>
+        <label>Contraseña:</label>
+        <input type="password" name="password"><br>
+        <label>Edad:</label>
+        <input type="number" name="edad"><br>
+        <label>Fecha de nacimiento:</label>
+        <input type="date" name="fecha"><br>
+        
+        <br>
+            <legend>Virtudes (incluyentes):</legend>
+            <label><input type="checkbox" name="virtudes" value="sabiduria">Sabiduría</label>
+            <label><input type="checkbox" name="virtudes" value="coraje">Coraje</label>
+            <label><input type="checkbox" name="virtudes" value="justicia">Justicia</label>
+            <label><input type="checkbox" name="virtudes" value="templanza">Templanza</label>
+        
+        
+        <br>
+
+            <legend>Filósofo favorito (excluyente):</legend>
+            <label><input type="radio" name="filosofo" value="epicteto">Epicteto</label>
+            <label><input type="radio" name="filosofo" value="marco">Marco Aurelio</label>
+            <label><input type="radio" name="filosofo" value="seneca">Séneca</label>
+            <label><input type="radio" name="filosofo" value="zenon">Zenón</label>
+        
+        <br>
+
+        <label>Email:</label>
+        <input type="email" name="email"><br>
+        <label>Archivo:</label>
+        <input type="file" name="archivo"><br>
+        <label>Color Estoico:</label>
+        <input type="color" name="color"><br>
+        <label>Nivel de serenidad:</label>
+        <input type="range" name="serenidad" min="0" max="10"><br>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

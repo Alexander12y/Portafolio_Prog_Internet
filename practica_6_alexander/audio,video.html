@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 6 - Elementos Multimedia</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .practice-nav {
+            background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        .practice-nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .practice-nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v18.0"></script>
+    
+    <!-- Twitter Widget Script -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<body>
+    <nav class="practice-nav">
+        <a href="../index.html">← Volver al Portafolio</a>
+        <a href="../practica_2_alexander/practica_2.html">Práctica 2</a>
+        <a href="../practica_3_alexander/home.html">Práctica 3</a>
+        <a href="../practica_4_alexander/factorial.html">Práctica 4</a>
+        <a href="../practica_5_alexander/consolas.html">Práctica 5</a>
+        <a href="../practica_7_alexander/pi.php">Práctica 7</a>
+        <a href="../about.html">Acerca de</a>
+    </nav>
+    
+    <div class="content">
+        <div class="container">
+            <h1>Practica 6 - Elementos Multimedia</h1>
+            <h2 style="text-align: center;">Alexander Clempner</h2>
+        
+        <!-- Sección de Audio HTML5 -->
+        <div class="multimedia-section">
+            <h2>Audio</h2>
+            <div class="placeholder">
+                <audio controls>
+                <source src="Bjorn Lynne - Hallway of Strings (Shockwave-Sound.com).ogg" type="audio/ogg">
+                <source src="Bjorn Lynne - Hallway of Strings (Shockwave-Sound.com).mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento audio.
+            </audio>
+            </div>
+            
+        </div>
+
+        <!-- Sección de Video HTML5 -->
+        <div class="multimedia-section">
+            <h2>Video</h2>
+            <div class="placeholder">
+                <video controls width="600" height="400">
+                <source src="Gen-3 Alpha Turbo 3837176757, Elegant and smooth c, Cropped - tree-of-li, M 5.mp4" type="video/mp4">
+                <source src="Gen-3 Alpha Turbo 3837176757, Elegant and smooth c, Cropped - tree-of-li, M 5.webm" type="video/webm">
+                Tu navegador no soporta el elemento video.
+            </video>
+            </div>
+            
+            
+        </div>
+
+        <!-- Sección de YouTube -->
+        <div class="multimedia-section">
+            <h2>YouTube</h2>
+            <div class="youtube-container">
+                <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/MafAZeag1_0?si=lsyMox0rZWtdCXeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        
+        <div class="multimedia-section">
+            <h2>Redes Sociales</h2>
+            <div class="social-feeds">
+                
+                <!-- Feed de X -->
+                <div class="feed-container">
+                    <h3>X</h3>
+
+                    <blockquote class="twitter-tweet">
+                        <p lang="en" dir="ltr">Just setting up my twttr</p>
+                        &mdash; jack (@jack) <a href="https://twitter.com/jack/status/20?ref_src=twsrc%5Etfw">March 21, 2006</a>
+                    </blockquote>
+                </div>
+
+                <!-- Feed de Facebook -->
+                <div class="feed-container">
+                    <h3>Facebook</h3>
+                    <!-- Plugin de página de Facebook -->
+                    <div class="fb-page" 
+                         data-href="https://www.facebook.com/facebook" 
+                         data-tabs="timeline" 
+                         data-width="350" 
+                         data-height="400" 
+                         data-small-header="false" 
+                         data-adapt-container-width="true" 
+                         data-hide-cover="false" 
+                         data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/facebook">Facebook</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="multimedia-section">
+            <h2>Google Maps</h2>
+            <div class="maps-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.9454715398854!2d-99.19149068509!3d19.432108886896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2020d7c8e6f51%3A0x8c5b8b8b8b8b8b8b!2sCiudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1695484800000!5m2!1ses-419!2smx" 
+                        width="800" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                
+            </div>
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>

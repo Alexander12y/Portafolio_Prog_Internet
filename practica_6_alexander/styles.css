@@ -1,0 +1,78 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.multimedia-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.multimedia-section h2 {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Estilos para audio y video HTML5 */
+audio, video {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos para feeds sociales */
+.social-feeds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.feed-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+}
+

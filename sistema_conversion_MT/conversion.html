@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Conversiones - Alexander Clempner</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Estilos específicos para el sistema de conversiones */
+        .conversion-container {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .conversion-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .conversion-section h2 {
+            color: #d97706;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #d97706;
+            padding-bottom: 0.5rem;
+        }
+        
+        .conversion-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .conversion-form label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .conversion-form input,
+        .conversion-form select {
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .conversion-form input:focus,
+        .conversion-form select:focus {
+            outline: none;
+            border-color: #d97706;
+        }
+        
+        .conversion-form button {
+            background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .conversion-form button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .result-input {
+            background-color: #f3f4f6 !important;
+            font-weight: 600;
+            color: #059669;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>Sistema de Conversiones</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">← Volver al Portafolio</a></li>
+                    <li><a href="../about.html" class="nav-link">Acerca de</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="conversion-container">
+            <div class="hero" style="text-align: center; margin-bottom: 3rem;">
+                <h1>Sistema de Conversión de Unidades</h1>
+
+            <!-- Conversión de Temperatura -->
+            <section class="conversion-section">
+                <h2>Temperatura</h2>
+                <div class="conversion-form">
+                    <label for="temp-input">Valor:</label>
+                    <input type="number" id="temp-input" step="any" placeholder="Ingrese valor">
+                    
+                    <label for="temp-from">De:</label>
+                    <select id="temp-from">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                    
+                    <label for="temp-to">A:</label>
+                    <select id="temp-to">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                    
+                    <button type="button" onclick="convertTemperature()">Convertir</button>
+                    
+                    <label for="temp-result">Resultado:</label>
+                    <input type="number" id="temp-result" readonly placeholder="Resultado" class="result-input">
+                </div>
+            </section>
+
+            <!-- Conversión de Distancia -->
+            <section class="conversion-section">
+                <h2>Distancia</h2>
+                <div class="conversion-form">
+                    <label for="distance-input">Valor:</label>
+                    <input type="number" id="distance-input" step="any" placeholder="Ingrese valor">
+                    
+                    <label for="distance-from">De:</label>
+                    <select id="distance-from">
+                        <option value="metros">Metros (m)</option>
+                        <option value="kilometros">Kilómetros (km)</option>
+                        <option value="millas">Millas (mi)</option>
+                        <option value="pies">Pies (ft)</option>
+                        <option value="pulgadas">Pulgadas (in)</option>
+                    </select>
+                    
+                    <label for="distance-to">A:</label>
+                    <select id="distance-to">
+                        <option value="metros">Metros (m)</option>
+                        <option value="kilometros">Kilómetros (km)</option>
+                        <option value="millas">Millas (mi)</option>
+                        <option value="pies">Pies (ft)</option>
+                        <option value="pulgadas">Pulgadas (in)</option>
+                    </select>
+                    
+                    <button type="button" onclick="convertDistance()">Convertir</button>
+                    
+                    <label for="distance-result">Resultado:</label>
+                    <input type="number" id="distance-result" readonly placeholder="Resultado" class="result-input">
+                </div>
+            </section>
+
+            <!-- Conversión de Tiempo -->
+            <section class="conversion-section">
+                <h2>Tiempo</h2>
+                <div class="conversion-form">
+                    <label for="time-input">Valor:</label>
+                    <input type="number" id="time-input" step="any" placeholder="Ingrese valor">
+                    
+                    <label for="time-from">De:</label>
+                    <select id="time-from">
+                        <option value="años">Años</option>
+                        <option value="dias">Días</option>
+                        <option value="horas">Horas</option>
+                        <option value="segundos">Segundos</option>
+                    </select>
+                    
+                    <label for="time-to">A:</label>
+                    <select id="time-to">
+                        <option value="años">Años</option>
+                        <option value="dias">Días</option>
+                        <option value="horas">Horas</option>
+                        <option value="segundos">Segundos</option>
+                    </select>
+                    
+                    <button type="button" onclick="convertTime()">Convertir</button>
+                    
+                    <label for="time-result">Resultado:</label>
+                    <input type="number" id="time-result" readonly placeholder="Resultado" class="result-input">
+                </div>
+            </section>
+
+            <!-- Conversión de Moneda -->
+            <section class="conversion-section">
+                <h2>Moneda</h2>
+                <div class="conversion-form">
+                    <label for="currency-input">Valor:</label>
+                    <input type="number" id="currency-input" step="any" placeholder="Ingrese valor">
+                    
+                    <label for="currency-from">De:</label>
+                    <select id="currency-from">
+                        <option value="MXN">MXN</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                    
+                    <label for="currency-to">A:</label>
+                    <select id="currency-to">
+                        <option value="MXN">MXN</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                    
+                    <button type="button" onclick="convertCurrency()">Convertir</button>
+                    
+                    <label for="currency-result">Resultado:</label>
+                    <input type="number" id="currency-result" readonly placeholder="Resultado" class="result-input">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alexander Clempner - Sistema de Conversiones</p>
+        </div>
+    </footer>
+
+    <script src="funciones_conversion.js"></script>
+</body>
+</html>

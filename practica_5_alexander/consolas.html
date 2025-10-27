@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Videojuegos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/table-styles.css">
+    <link rel="stylesheet" href="css/tabla-estilos.css">
+    <script src="js/registroJuegos.js"></script>
+    <style>
+        .practice-nav {
+            background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        .practice-nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .practice-nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background-color: #f8f9fa; 
+        }
+        label { 
+            display: block; 
+            margin-top: 15px; 
+            color: #333;
+            font-weight: 500;
+        }
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        input:focus {
+            border-color: #d97706;
+            outline: none;
+        }
+        .checkbox-group, .radio-group { 
+            margin-top: 20px; 
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #d97706;
+        }
+        .checkbox-group label, .radio-group label {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+            cursor: pointer;
+        }
+        .checkbox-group input, .radio-group input {
+            margin-right: 0.5rem;
+            width: auto;
+        }
+        h1 { 
+            color: #333; 
+            margin-bottom: 20px; 
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        h3 { 
+            color: #d97706; 
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }    
+        #valorCalificacion {
+            font-weight: bold;
+            color: #d97706;
+            margin-left: 10px;
+            font-size: 1.1rem;
+        }
+        button {
+            background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        #tabla-container {
+            margin-top: 30px;
+        }
+        #tabla-container h2 {
+            color: #333;
+            border-bottom: 2px solid #d97706;
+            padding-bottom: 0.5rem;
+        }
+    </style>
+
+    <script>
+        // Script para actualizar el valor del range en tiempo real
+        document.addEventListener('DOMContentLoaded', function() {
+            const calificacionInput = document.getElementById('calificacion');
+            const valorCalificacion = document.getElementById('valorCalificacion');
+            
+            calificacionInput.addEventListener('input', function() {
+                valorCalificacion.textContent = this.value;
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <nav class="practice-nav">
+        <a href="../index.html">← Volver al Portafolio</a>
+        <a href="../practica_2_alexander/practica_2.html">Práctica 2</a>
+        <a href="../practica_3_alexander/home.html">Práctica 3</a>
+        <a href="../practica_4_alexander/factorial.html">Práctica 4</a>
+        <a href="../practica_6_alexander/audio,video.html">Práctica 6</a>
+        <a href="../practica_7_alexander/pi.php">Práctica 7</a>
+        <a href="../about.html">Acerca de</a>
+    </nav>
+    
+    <div class="content">
+        <h1>Registro de Videojuegos</h1>
+        <form id="formulario">
+            <label>
+                Nombre:
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del videojuego">
+            </label>
+            <label>
+                Publisher (Email):
+                <input type="email" name="publisher" id="publisher" placeholder="correo@publisher.com">
+            </label>
+            <label>
+                Color favorito:
+                <input type="color" name="color" id="color" value="#ff0000">
+            </label>
+            <label>
+                Calificación (1-10):
+                <input type="range" name="calificacion" id="calificacion" min="1" max="10" value="5">
+                <span id="valorCalificacion">5</span>
+            </label>
+            <div class="checkbox-group">
+                <h3>Consola/Platform:</h3>
+                <label><input type="checkbox" name="consola" value="Steam"> Steam</label>
+                <label><input type="checkbox" name="consola" value="Xbox Series X"> Xbox Series X</label>
+                <label><input type="checkbox" name="consola" value="Playstation 5"> PlayStation 5</label>
+                <label><input type="checkbox" name="consola" value="Nintendo Switch"> Nintendo Switch</label>
+            </div>
+            <div class="radio-group">
+                <h3>Medio</h3>
+                <label><input type="radio" name="medio" value="Físico" required> Juego físico</label>
+                <label><input type="radio" name="medio" value="Digital"> Juego digital</label>
+            </div>
+            <br>
+            <label>
+                Fecha de adquisición:
+                <input type="date" name="fecha" id="fecha" required>
+            </label>
+            <br><br>
+            <button type="button" onclick="registro()">Registrar</button>
+        </form>
+        
+        <div id="tabla-container" style="margin-top: 30px;">
+            <h2>Juegos Registrados</h2>
+            <table id="consolas">
+                <!-- La tabla se llenará dinámicamente con JavaScript -->
+            </table>
+        </div>
+    </div>
+</body>
+</html>
